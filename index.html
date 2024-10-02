@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Guard - Welcome</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #0077be;
+            font-size: 3em;
+        }
+
+        p {
+            color: #333;
+            font-size: 1.5em;
+        }
+
+
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            max-width: 300px;
+            display: block;
+            
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #0077be;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+            max-width: 320px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005f8d;
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        footer {
+            margin-top: 50px;
+           text-align: center;
+        }
+        #login-section{
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #register-section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        .btn1{
+            text-decoration: underline;
+            font-size: 14px;
+            text-align: center;
+            background-color: transparent;
+            color: #657bb6;
+            outline: none;
+            border: none;
+        }
+        .btn1:hover{
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ocean Guard</h1>
+        <p>Welcome to Ocean Guard!</p>
+    </header>
+
+    <main>
+        <section id="login-section">
+            <h2>Login</h2>
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <input type="submit" value="Sign In">
+            </form>
+            <button class="btn1" onclick="register()">Register</button>
+        </section>
+
+
+
+
+
+
+        
+        <section id="register-section" >
+            <h2>Register</h2>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="submit" value="Register">
+            </form>
+            <button class="btn1" onclick="logIn()">logIn</button>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>© 2024 Ocean Guard. All rights reserved.</p>
+    </footer>
+    <script>
+        const regForm= document.querySelector("#register-section"),
+        logForm= document.querySelector("#login-section");
+        function logIn(){
+                regForm.style.display = "none";
+                logForm.style.display ="flex"
+        }
+
+        function register(){
+                logForm.style.display = "none";
+                regForm.style.display ="flex"
+        }
+    
+    </script>
+</body>
+</html>
